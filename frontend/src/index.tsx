@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 import Dashboard from './pages/Dashboard';
+import VisualizarPerfil from './pages/visualizarPerfil';
 
 
 
@@ -19,6 +20,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}/>
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="visualizar-perfil" element={<VisualizarPerfil/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
