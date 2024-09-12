@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 import Dashboard from './pages/Dashboard';
+import ListaCursos from './pages/ListaCursos';
 
 
 
@@ -19,6 +20,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}/>
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="lista-de-cursos" element={<ListaCursos />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
