@@ -1,81 +1,68 @@
+import { Edit, Trash, Plus } from 'lucide-react';
+
 export default function ListaCursos() {
-    return(
-    <div className="min-h-screen bg-[#F2F7FB] mx-auto p-6 flex flex-col items-center">
-        <div className="w-4/5 flex flex-col gap-12 mt-10">
-            <div className="flex flex-row w-full justify-between">
-            <h1 className="text-3xl font-bold text-[#071451] ">Listagem de Cursos</h1>
-                <button className="bg-[#2c3d8f] hover:bg-[#3d4fab] text-white px-6 py-2 rounded-md ">+ Adicionar Novo Curso</button>
-            </div>
-        
-            <div className="overflow-x-auto">
-                <table className="min-w-full bg-white shadow-md rounded-lg">
-                    <thead>
-                        <tr className="bg-[#1C275F] text-white">
-                            <th className="py-3 px-6 text-left">Curso</th>
-                            <th className="py-3 px-6 text-left">Código</th>
-                            <th className="py-3 px-6 text-left">Professor</th>
-                            <th className="py-3 px-6 text-center">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="border-b border-gray-200 hover:bg-gray-100">
-                            <td className="py-4 px-6">Engenharia de Software</td>
-                            <td className="py-4 px-6">ENG123</td>
-                            <td className="py-4 px-6">Dr. João Silva</td>
-                            <td className="py-4 px-6 text-center">
-                            <button className="bg-[#f5f51c] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#f0ec27]">Editar</button>
-                            <button className="bg-[#e84f4f] text-white px-4 py-2 rounded-md hover:bg-red-600">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr className="border-b border-gray-200 hover:bg-gray-100">
-                            <td className="py-4 px-6">Administração</td>
-                            <td className="py-4 px-6">ADM456</td>
-                            <td className="py-4 px-6">Profa. Maria Souza</td>
-                            <td className="py-4 px-6 text-center">
-                            <button className="bg-[#f5f51c] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#f0ec27]">Editar</button>
-                            <button className="bg-[#e84f4f] text-white px-4 py-2 rounded-md hover:bg-red-600">Excluir</button>
-                            </td>
-                        </tr> 
-                        <tr className="border-b border-gray-200 hover:bg-gray-100">
-                            <td className="py-4 px-6">Administração</td>
-                            <td className="py-4 px-6">ADM456</td>
-                            <td className="py-4 px-6">Profa. Maria Souza</td>
-                            <td className="py-4 px-6 text-center">
-                            <button className="bg-[#f5f51c] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#f0ec27]">Editar</button>
-                            <button className="bg-[#e84f4f] text-white px-4 py-2 rounded-md hover:bg-red-600">Excluir</button>
-                            </td>
-                        </tr> 
-                        <tr className="border-b border-gray-200 hover:bg-gray-100">
-                            <td className="py-4 px-6">Administração</td>
-                            <td className="py-4 px-6">ADM456</td>
-                            <td className="py-4 px-6">Profa. Maria Souza</td>
-                            <td className="py-4 px-6 text-center">
-                            <button className="bg-[#f5f51c] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#f0ec27]">Editar</button>
-                            <button className="bg-[#e84f4f] text-white px-4 py-2 rounded-md hover:bg-red-600">Excluir</button>
-                            </td>
-                        </tr> 
-                        <tr className="border-b border-gray-200 hover:bg-gray-100">
-                            <td className="py-4 px-6">Administração</td>
-                            <td className="py-4 px-6">ADM456</td>
-                            <td className="py-4 px-6">Profa. Maria Souza</td>
-                            <td className="py-4 px-6 text-center">
-                            <button className="bg-[#f5f51c] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#f0ec27]">Editar</button>
-                            <button className="bg-[#e84f4f] text-white px-4 py-2 rounded-md hover:bg-red-600">Excluir</button>
-                            </td>
-                        </tr> 
-                        <tr className="border-b border-gray-200 hover:bg-gray-100">
-                            <td className="py-4 px-6">Administração</td>
-                            <td className="py-4 px-6">ADM456</td>
-                            <td className="py-4 px-6">Profa. Maria Souza</td>
-                            <td className="py-4 px-6 text-center">
-                            <button className="bg-[#f5f51c] text-white px-4 py-2 rounded-md mr-2 hover:bg-[#f0ec27]">Editar</button>
-                            <button className="bg-[#e84f4f] text-white px-4 py-2 rounded-md hover:bg-red-600">Excluir</button>
-                            </td>
-                        </tr> 
-                    </tbody>
-                </table>
-            </div>
+  return (
+    <div className="min-h-screen bg-[#F2F7FB] p-6">
+      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
+        <h1 className="text-2xl font-bold text-[#1C275F] mb-4">Listagem de Cursos</h1>
+        <div className="mb-3 flex justify-end">
+          <button className="bg-[#023977] text-white px-6 py-2 rounded-md flex items-center hover:bg-[#1C275F]">
+            <Plus size={16} className="mr-2" />
+            Adicionar Curso
+          </button>
         </div>
+        <table className="w-full text-left table-auto">
+          <thead className="bg-[#A1CAE3] h-12">
+            <tr>
+              <th className="px-4 py-2 text-[#1C275F]">Curso</th>
+              <th className="px-4 py-2 text-[#1C275F]">Departamento</th>
+              <th className="px-4 py-2 text-[#1C275F]">Coordenador</th>
+              <th className="px-4 py-2 text-[#1C275F]">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white hover:bg-[#F2F7FB]">
+              <td className="border px-4 py-2">Engenharia de Software</td>
+              <td className="border px-4 py-2">Tecnologia da Informação</td>
+              <td className="border px-4 py-2">Prof. João da Silva</td>
+              <td className="border px-4 py-2 flex space-x-4">
+                <button className="text-[#023977] hover:text-[#1C275F]">
+                  <Edit size={22} />
+                </button>
+                <button className="text-red-500 hover:text-red-700">
+                  <Trash size={22} />
+                </button>
+              </td>
+            </tr>
+            <tr className="bg-white hover:bg-[#F2F7FB]">
+              <td className="border px-4 py-2">Ciência da Computação</td>
+              <td className="border px-4 py-2">Computação</td>
+              <td className="border px-4 py-2">Prof. Maria Oliveira</td>
+              <td className="border px-4 py-2 flex space-x-4">
+                <button className="text-[#023977] hover:text-[#1C275F]">
+                  <Edit size={22} />
+                </button>
+                <button className="text-red-500 hover:text-red-700">
+                  <Trash size={22} />
+                </button>
+              </td>
+            </tr>
+            <tr className="bg-white hover:bg-[#F2F7FB]">
+              <td className="border px-4 py-2">Sistemas de Informação</td>
+              <td className="border px-4 py-2">Informática</td>
+              <td className="border px-4 py-2">Prof. Ana Souza</td>
+              <td className="border px-4 py-2 flex space-x-4">
+                <button className="text-[#023977] hover:text-[#1C275F]">
+                  <Edit size={22} />
+                </button>
+                <button className="text-red-500 hover:text-red-700">
+                  <Trash size={22} />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
